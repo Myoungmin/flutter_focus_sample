@@ -52,6 +52,7 @@ class _FocusPageState extends State<FocusPage> {
                     setState(() => notifyText = "내용을 입력해주세요.");
                   } else {
                     setState(() => notifyText = _textController.text);
+                    FocusManager.instance.primaryFocus?.unfocus();
                   }
                 },
                 child: const Text("확인"),
